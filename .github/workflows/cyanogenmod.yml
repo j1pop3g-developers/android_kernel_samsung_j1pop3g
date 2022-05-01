@@ -25,7 +25,7 @@ jobs:
       run: |
         mkdir -p /home/runner/work/output
         cp arch/arm/boot/zImage /home/runner/work/output/zImage
-        $ find . -name "*.ko" -exec cp {} /home/runner/work/output/ \;
+        find . -name "*.ko" -exec cp {} /home/runner/work/output/ \;
 
     - name: Uploading Output
       uses: actions/upload-artifact@v2
